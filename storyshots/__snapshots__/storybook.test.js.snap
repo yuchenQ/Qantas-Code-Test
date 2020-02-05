@@ -43,3 +43,25 @@ exports[`Storyshots Page Default 1`] = `
   </div>
 </div>
 `;
+
+exports[`Storyshots Select Default 1`] = `
+<select
+  onChange={[Function]}
+>
+  <option>
+    prefix
+     
+    option_1
+  </option>
+  <option>
+    prefix
+     
+    option_2
+  </option>
+  <option>
+    prefix
+     
+    option_3
+  </option>
+</select>
+`;

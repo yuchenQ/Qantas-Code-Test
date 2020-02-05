@@ -43,5 +43,5 @@ export function Header({ count, location }) {
 
 Header.propTypes = {
   count: PropTypes.number.isRequired,
-  location: PropTypes.number.isRequired,
+  location: PropTypes.string.isRequired,
 };
