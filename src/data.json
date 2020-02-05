@@ -1,0 +1,145 @@
+{
+  "location": "Sydney",
+  "offers": [
+    {
+      "uuid": "7183e65e-07cd-4727-ae7d-782a7b2da611",
+      "hotel": {
+        "id": "P107801",
+        "name": "Courtyard by Marriott Sydney-North Ryde",
+        "address": ["7-11 Talavera Rd", "North Ryde"],
+        "rate": {
+          "type": "CIRCLE",
+          "vale": "4.5"
+        }
+      },
+      "room": {
+        "type": "Deluxe Balcony Room"
+      },
+      "price": {
+        "amount": 329.0,
+        "currency": "AUD",
+        "promotion": {
+          "saving": {
+            "amount": 30.0,
+            "currency": "AUD"
+          }
+        }
+      },
+      "cancellation": "NOT_REFUNDABLE",
+      "previewImage": {
+        "url": "https://unsplash.it/145/125/?random",
+        "caption": "Image of Courtyard by Marriott Sydney-North Ryde",
+        "tag": "Exclusive Deal"
+      }
+    },
+    {
+      "uuid": "6836cbd2-7c23-45f6-985d-51d22535ae7a",
+      "hotel": {
+        "id": "P107802",
+        "name": "Primus Hotel Sydney",
+        "address": ["339 Pitt St", "Sydney"],
+        "rate": {
+          "type": "CIRCLE",
+          "vale": 5
+        }
+      },
+      "room": {
+        "type": "Deluxe King"
+      },
+      "price": {
+        "amount": 375.0,
+        "currency": "AUD",
+        "promotion": {
+          "saving": {
+            "amount": 28.0,
+            "currency": "AUD"
+          }
+        }
+      },
+      "cancellation": "FREE_CANCELLATION",
+      "previewImage": {
+        "url": "https://unsplash.it/145/125/?random",
+        "caption": "Image of Primus Hotel Sydney",
+        "tag": "Exclusive Deal"
+      }
+    },
+    {
+      "uuid": "7076bb6f-5a6b-4eef-bbe6-1d8aa5d60a4a",
+      "hotel": {
+        "id": "P107803",
+        "name": "Rydges World Square Sydney",
+        "address": ["389 Pitt St", "Sydney"],
+        "rate": {
+          "type": "STAR",
+          "vale": 5
+        }
+      },
+      "room": {
+        "type": "Deluxe King Room"
+      },
+      "price": {
+        "amount": 227.0,
+        "currency": "AUD",
+        "promotion": null
+      },
+      "cancellation": "NOT_REFUNDABLE",
+      "previewImage": {
+        "url": "https://unsplash.it/145/125/?random",
+        "caption": "Image of Rydges World Square Sydney",
+        "tag": "Red Hot"
+      }
+    },
+    {
+      "uuid": "91160f98-36b3-4a97-acba-3b4a74c0395e",
+      "hotel": {
+        "id": "P107804",
+        "name": "PARKROYAL Darling Harbour Sydney",
+        "address": ["150 Day Street", "Sydney"],
+        "rate": {
+          "ratingValue": 4.5,
+          "ratingType": "STAR"
+        }
+      },
+      "room": {
+        "type": "Deluxe King Room"
+      },
+      "price": {
+        "amount": 535.0,
+        "currency": "AUD",
+        "promotion": null
+      },
+      "cancellation": "FREE_CANCELLATION",
+      "previewImage": {
+        "url": "https://unsplash.it/145/125/?random",
+        "caption": "Image of PARKROYAL Darling Harbour Sydney",
+        "tag": "Exclusive Deal"
+      }
+    },
+    {
+      "uuid": "f46c3bf0-c6e2-4af5-add1-f8f134697914",
+      "hotel": {
+        "id": "P107805",
+        "name": "Metro Hotel Marlow Sydney Central",
+        "address": ["431-439 Pitt Street", "Sydney"],
+        "rate": {
+          "ratingValue": 3.5,
+          "ratingType": "STAR"
+        }
+      },
+      "room": {
+        "type": "Deluxe King"
+      },
+      "price": {
+        "amount": 295.0,
+        "currency": "AUD",
+        "promotion": null
+      },
+      "cancellation": "FREE_CANCELLATION",
+      "previewImage": {
+        "url": "https://unsplash.it/145/125/?random",
+        "caption": "Image of PARKROYAL Darling Harbour Sydney",
+        "tag": "Bonus Points"
+      }
+    }
+  ]
+}
