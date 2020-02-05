@@ -4,6 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Select } from '../Select';
+import { SORT_TYPE } from '../App/sortOffers';
 
 const StyledHeader = styled.div`
   display: grid;
@@ -23,7 +24,7 @@ const SortSelect = styled.div`
   }
 `;
 
-export function Header({ count, location }) {
+export function Header({ count, location, options, onSelect }) {
   return (
     <StyledHeader>
       <div data-testid="search-result">
@@ -35,7 +36,12 @@ export function Header({ count, location }) {
       </div>
       <SortSelect>
         <strong>Sort by</strong>
-        <Select prefix="Price" options={['high to low', 'low to high']} onChange={e => e} />
+        <Select
+          prefix="Price"
+          options={options}
+          onSelect={onSelect}
+          defaultOption={options[0]}
+        />
       </SortSelect>
     </StyledHeader>
   );
@@ -44,4 +50,7 @@ export function Header({ count, location }) {
 Header.propTypes = {
   count: PropTypes.number.isRequired,
   location: PropTypes.string.isRequired,
+  options: PropTypes.arrayOf(PropTypes.oneOf(Object.values(SORT_TYPE)))
+    .isRequired,
+  onSelect: PropTypes.func.isRequired,
 };

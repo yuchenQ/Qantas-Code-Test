@@ -46,19 +46,26 @@ exports[`Storyshots Page Default 1`] = `
 
 exports[`Storyshots Select Default 1`] = `
 <select
+  defaultValue="option_1"
   onChange={[Function]}
 >
-  <option>
+  <option
+    value="option_1"
+  >
     prefix
      
     option_1
   </option>
-  <option>
+  <option
+    value="option_2"
+  >
     prefix
      
     option_2
   </option>
-  <option>
+  <option
+    value="option_3"
+  >
     prefix
      
     option_3

@@ -3,11 +3,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function Select({ prefix, options, onChange }) {
+export function Select({ prefix, options, onSelect, defaultOption }) {
   return (
-    <select onChange={onChange}>
+    <select onChange={onSelect} defaultValue={defaultOption}>
       {options.map(option => (
-        <option key={option}>
+        <option key={option} value={option}>
           {prefix && prefix}&nbsp;{option}
         </option>
       ))}
@@ -22,5 +22,6 @@ Select.defaultProps = {
 Select.propTypes = {
   prefix: PropTypes.string,
   options: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onChange: PropTypes.func.isRequired,
+  onSelect: PropTypes.func.isRequired,
+  defaultOption: PropTypes.string.isRequired,
 };

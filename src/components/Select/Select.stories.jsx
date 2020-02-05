@@ -18,14 +18,15 @@ export default {
 
 const options = ['option_1', 'option_2', 'option_3'];
 
-const { onChange } = actions('onChange');
+const { onSelect } = actions('onSelect');
 
 export function Default() {
   return (
     <Select
       prefix={text('prefix', 'prefix')}
       options={array('options', options)}
-      onChange={onChange}
+      onSelect={onSelect}
+      defaultOption={text('defaultOption', options[0])}
     />
   );
 }
