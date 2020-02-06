@@ -9,14 +9,12 @@
         "address": ["7-11 Talavera Rd", "North Ryde"],
         "rate": {
           "type": "CIRCLE",
-          "vale": "4.5"
-        }
+          "value": 4.5
+        },
+        "room": "Deluxe Balcony Room"
       },
-      "room": {
-        "type": "Deluxe Balcony Room"
-      },
-      "price": {
-        "amount": 329.0,
+      "quote": {
+        "price": 329.0,
         "currency": "AUD",
         "promotion": {
           "saving": {
@@ -40,14 +38,12 @@
         "address": ["339 Pitt St", "Sydney"],
         "rate": {
           "type": "CIRCLE",
-          "vale": 5
-        }
+          "value": 5
+        },
+        "room": "Deluxe King"
       },
-      "room": {
-        "type": "Deluxe King"
-      },
-      "price": {
-        "amount": 375.0,
+      "quote": {
+        "price": 375.0,
         "currency": "AUD",
         "promotion": {
           "saving": {
@@ -71,14 +67,12 @@
         "address": ["389 Pitt St", "Sydney"],
         "rate": {
           "type": "STAR",
-          "vale": 5
-        }
+          "value": 5
+        },
+        "room": "Deluxe King Room"
       },
-      "room": {
-        "type": "Deluxe King Room"
-      },
-      "price": {
-        "amount": 227.0,
+      "quote": {
+        "price": 227.0,
         "currency": "AUD",
         "promotion": null
       },
@@ -96,15 +90,13 @@
         "name": "PARKROYAL Darling Harbour Sydney",
         "address": ["150 Day Street", "Sydney"],
         "rate": {
-          "ratingValue": 4.5,
-          "ratingType": "STAR"
-        }
+          "value": 4.5,
+          "type": "STAR"
+        },
+        "room": "Deluxe King Room"
       },
-      "room": {
-        "type": "Deluxe King Room"
-      },
-      "price": {
-        "amount": 535.0,
+      "quote": {
+        "price": 535.0,
         "currency": "AUD",
         "promotion": null
       },
@@ -122,15 +114,13 @@
         "name": "Metro Hotel Marlow Sydney Central",
         "address": ["431-439 Pitt Street", "Sydney"],
         "rate": {
-          "ratingValue": 3.5,
-          "ratingType": "STAR"
-        }
+          "value": 3.5,
+          "type": "STAR"
+        },
+        "room": "Deluxe King"
       },
-      "room": {
-        "type": "Deluxe King"
-      },
-      "price": {
-        "amount": 295.0,
+      "quote": {
+        "price": 295.0,
         "currency": "AUD",
         "promotion": null
       },

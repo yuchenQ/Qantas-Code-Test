@@ -10,7 +10,7 @@ export function sortOffers(offers, sortType) {
 
   return newOffers.sort((a, b) => {
     return sortType === SORT_TYPE.ASC
-      ? a.price.amount - b.price.amount
-      : b.price.amount - a.price.amount;
+      ? a.quote.price - b.quote.price
+      : b.quote.price - a.quote.price;
   });
 }

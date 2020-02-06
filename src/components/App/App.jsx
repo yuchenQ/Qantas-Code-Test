@@ -7,6 +7,7 @@ import { Header } from '../Header';
 import { offers, location } from '../../data.json';
 import logoUrl from '../../assets/qantas-logo.png';
 import { sortOffers, SORT_TYPE } from './sortOffers';
+import { Offers } from '../Offers';
 
 export function App() {
   const [sortType, setSortType] = useState(SORT_TYPE.DESC);
@@ -26,10 +27,7 @@ export function App() {
           onSelect={onSelect}
         />
       }>
-      <div data-testid="hello-world">Hello World!</div>
-      {sortOffers(offers, sortType).map(({ uuid, price: { amount } }) => (
-        <div key={uuid}>{amount}</div>
-      ))}
+      <Offers offers={sortOffers(offers, sortType)} />
     </Page>
   );
 }
