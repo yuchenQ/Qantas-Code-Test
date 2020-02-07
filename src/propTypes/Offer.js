@@ -16,7 +16,6 @@ export const Hotel = {
 export const Promotion = {
   saving: PropTypes.shape({
     amount: PropTypes.number,
-    currency: PropTypes.string,
   }),
 };
 

@@ -7,6 +7,7 @@ import {
   COLOR_DUSTY_GRAY,
   COLOR_RIPTIDE_GREEN,
   COLOR_VENETIAN_RED,
+  COLOR_BUTTER_YELLOW,
 } from '../../../styles/variables';
 import { Rate } from '../../Rate/Rate';
 import { Hotel } from '../../../propTypes/Offer';
@@ -70,7 +71,7 @@ export function Detail({
       <Heading>
         <NameLayout>
           <HotelName>{name}</HotelName>
-          <Rate type={type} value={value} />
+          <Rate color={COLOR_BUTTER_YELLOW} type={type} value={value} />
         </NameLayout>
         <Address>{address.join(' ')}</Address>
       </Heading>

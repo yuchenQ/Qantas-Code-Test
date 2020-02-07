@@ -9,7 +9,6 @@ import {
   FaStarHalf as HalfStar,
 } from 'react-icons/fa';
 import styled from 'styled-components';
-import { COLOR_BUTTER_YELLOW } from '../../styles/variables';
 
 const TYPE = {
   STAR: 'STAR',
@@ -17,10 +16,10 @@ const TYPE = {
 };
 
 const StyledRate = styled.div`
-  color: ${COLOR_BUTTER_YELLOW};
+  color: ${({ color }) => color && color};
 `;
 
-export function Rate({ type, value }) {
+export function Rate({ type, value, color }) {
   const Icon = {
     [TYPE.CIRCLE]: {
       full: Circle,
@@ -46,10 +45,17 @@ export function Rate({ type, value }) {
     }
   }
 
-  return <StyledRate>{characters}</StyledRate>;
+  return <StyledRate color={color}>{characters}</StyledRate>;
 }
+
+Rate.defaultProps = {
+  color: '',
+};
 
 Rate.propTypes = {
   type: PropTypes.string.isRequired,
   value: PropTypes.number.isRequired,
+  color: PropTypes.string,
 };
+
+Rate.type = TYPE;
