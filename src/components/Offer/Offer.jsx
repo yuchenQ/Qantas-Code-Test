@@ -3,7 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { DUSTY_GRAY } from '../../styles/variables';
+import { COLOR_DUSTY_GRAY } from '../../styles/variables';
 import { Preview } from './Preview';
 import { Detail } from './Detail';
 import { Quote } from './Quote';
@@ -19,7 +19,7 @@ const StyledOffer = styled.div`
   & ~ & {
     ::before {
       content: '';
-      border-top: 1px solid ${DUSTY_GRAY};
+      border-top: 1px solid ${COLOR_DUSTY_GRAY};
       position: absolute;
       right: 0;
       left: 0;

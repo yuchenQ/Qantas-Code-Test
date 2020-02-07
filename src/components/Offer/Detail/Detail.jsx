@@ -3,9 +3,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { DUSTY_GRAY } from '../../../styles/variables';
+import {
+  COLOR_DUSTY_GRAY,
+  COLOR_RIPTIDE_GREEN,
+  COLOR_VENETIAN_RED,
+} from '../../../styles/variables';
 import { Rate } from '../../Rate/Rate';
 import { Hotel } from '../../../propTypes/Offer';
+import { isCancellable } from './isCancellable';
 
 const StyledDetail = styled.section`
   --gap: 0.5rem;
@@ -37,13 +42,19 @@ const HotelName = styled.h2`
 `;
 
 const Address = styled.div`
-  color: ${DUSTY_GRAY};
+  color: ${COLOR_DUSTY_GRAY};
   font-style: normal;
 `;
 
-const RoomType = styled.div``;
+const RoomType = styled.div`
+  color: ${COLOR_VENETIAN_RED};
+  text-decoration: underline;
+`;
 
-const Policy = styled.div``;
+const FreeCancellation = styled.div`
+  align-self: end;
+  color: ${COLOR_RIPTIDE_GREEN};
+`;
 
 export function Detail({
   hotel: {
@@ -64,7 +75,9 @@ export function Detail({
         <Address>{address.join(' ')}</Address>
       </Heading>
       <RoomType>{room}</RoomType>
-      <Policy>{cancellation}</Policy>
+      {isCancellable(cancellation) && (
+        <FreeCancellation>Free cancellation</FreeCancellation>
+      )}
     </StyledDetail>
   );
 }
