@@ -18,8 +18,7 @@
         "currency": "AUD",
         "promotion": {
           "saving": {
-            "amount": 30.0,
-            "currency": "AUD"
+            "amount": 30.0
           }
         }
       },
@@ -47,8 +46,7 @@
         "currency": "AUD",
         "promotion": {
           "saving": {
-            "amount": 28.0,
-            "currency": "AUD"
+            "amount": 28.0
           }
         }
       },

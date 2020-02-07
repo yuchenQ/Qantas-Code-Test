@@ -28,6 +28,10 @@ const StyledOffer = styled.div`
   }
 `;
 
+const StyledQuote = styled(Quote)`
+  align-self: end;
+`;
+
 export function Offer({
   offer: {
     hotel,
@@ -40,7 +44,7 @@ export function Offer({
     <StyledOffer>
       <Preview imageUrl={imageUrl} caption={caption} tag={tag} />
       <Detail hotel={hotel} cancellation={cancellation} />
-      <Quote quote={quote} />
+      <StyledQuote quote={quote} />
     </StyledOffer>
   );
 }
