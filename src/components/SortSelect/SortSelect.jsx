@@ -4,7 +4,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Select } from '../Select';
 import { SORT_TYPE } from '../App/sortOffers';
 
 const StyledSortSelect = styled.div`
@@ -21,13 +20,14 @@ const StyledSortSelect = styled.div`
 export function SortSelect({ options, onSelect, sortType }) {
   return (
     <StyledSortSelect>
-      <strong>Sort by</strong>
-      <Select
-        prefix="Price"
-        options={options}
-        onSelect={onSelect}
-        value={sortType}
-      />
+      <strong data-testid="label">Sort by</strong>
+      <select onChange={onSelect} value={sortType} data-testid="select">
+        {options.map(option => (
+          <option key={option} value={option} data-testid="option">
+            Price&nbsp;{option}
+          </option>
+        ))}
+      </select>
     </StyledSortSelect>
   );
 }

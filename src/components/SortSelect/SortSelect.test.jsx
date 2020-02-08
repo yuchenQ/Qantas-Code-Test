@@ -3,17 +3,17 @@
 import React from 'react';
 import { render, cleanup, fireEvent } from '@testing-library/react';
 import sinon from 'sinon';
-import { Select } from './Select';
+import { SortSelect } from './SortSelect';
+import { SORT_TYPE } from '../App/sortOffers';
 
-describe('Select', () => {
+describe('SortSelect', () => {
   const onSelectSpy = sinon.spy();
-  const options = ['option_1', 'option_2', 'option_3'];
+  const options = Object.values(SORT_TYPE);
 
   const data = {
-    prefix: 'prefix',
     options,
     onSelect: ({ target: { value } }) => onSelectSpy(value),
-    value: options[1],
+    sortType: options[0],
   };
 
   let getByTestId;
@@ -21,38 +21,42 @@ describe('Select', () => {
 
   beforeEach(() => {
     ({ getAllByTestId, getByTestId } = render(
-      <Select
-        prefix={data.prefix}
+      <SortSelect
         options={data.options}
         onSelect={data.onSelect}
-        value={data.value}
+        sortType={data.sortType}
       />,
     ));
   });
 
   afterEach(cleanup);
 
+  test('should show label', () => {
+    expect(getByTestId('label')).toHaveTextContent('Sort by');
+  });
+
   test('should have all input options', () => {
     getAllByTestId('option').forEach((element, i) => {
       expect(element.value).toBe(data.options[i]);
-      expect(element).toHaveTextContent(`${data.prefix} ${element.value}`);
+
+      expect(element).toHaveTextContent(`Price ${element.value}`);
     });
   });
 
   test('should see default option first', () => {
     const { value } = getByTestId('select');
 
-    expect(value).toBe(data.value);
+    expect(value).toBe(data.sortType);
   });
 
   test('onChange & value', () => {
     const select = getByTestId('select');
 
-    expect(select.value).toBe(data.value);
+    expect(select.value).toBe(data.sortType);
 
     const { value } = getAllByTestId('option')[0];
 
     fireEvent.change(select, { target: { value } });
-    sinon.assert.calledWith(onSelectSpy, data.options[0]);
+    sinon.assert.calledWith(onSelectSpy, data.sortType);
   });
 });
