@@ -17,6 +17,7 @@ const StyledSortSelect = styled.div`
   }
 `;
 
+// TODO: extract select function to a shared component when storyshot can support hook
 export function SortSelect({ options, onSelect, sortType }) {
   return (
     <StyledSortSelect>
