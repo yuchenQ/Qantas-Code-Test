@@ -24,7 +24,7 @@ const SortSelect = styled.div`
   }
 `;
 
-export function Header({ count, location, options, onSelect }) {
+export function SearchResult({ count, location, options, onSelect }) {
   return (
     <StyledHeader>
       <div data-testid="search-result">
@@ -47,7 +47,7 @@ export function Header({ count, location, options, onSelect }) {
   );
 }
 
-Header.propTypes = {
+SearchResult.propTypes = {
   count: PropTypes.number.isRequired,
   location: PropTypes.string.isRequired,
   options: PropTypes.arrayOf(PropTypes.oneOf(Object.values(SORT_TYPE)))

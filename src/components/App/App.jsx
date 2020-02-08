@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import '../../styles/index.css';
 import { Page } from '../Page';
-import { Header } from '../Header';
+import { SearchResult } from '../SearchResult';
 import { offers, location } from '../../data.json';
 import logoUrl from '../../assets/qantas-logo.png';
 import { sortOffers, SORT_TYPE } from './sortOffers';
@@ -20,7 +20,7 @@ export function App() {
     <Page
       logoUrl={logoUrl}
       header={
-        <Header
+        <SearchResult
           count={offers.length}
           location={location}
           options={Object.values(SORT_TYPE)}
