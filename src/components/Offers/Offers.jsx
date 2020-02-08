@@ -15,8 +15,14 @@ const StyledHotels = styled.div`
 export function Offers({ offers }) {
   return (
     <StyledHotels>
-      {offers.map(({ uuid, ...rest }) => (
-        <Offer key={uuid} offer={rest} />
+      {offers.map(({ uuid, hotel, quote, cancellation, previewImage }) => (
+        <Offer
+          key={uuid}
+          hotel={hotel}
+          quote={quote}
+          cancellation={cancellation}
+          previewImage={previewImage}
+        />
       ))}
     </StyledHotels>
   );

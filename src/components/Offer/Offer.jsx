@@ -33,12 +33,10 @@ const StyledQuote = styled(Quote)`
 `;
 
 export function Offer({
-  offer: {
-    hotel,
-    quote,
-    cancellation,
-    previewImage: { url: imageUrl, caption, tag },
-  },
+  hotel,
+  quote,
+  cancellation,
+  previewImage: { url: imageUrl, caption, tag },
 }) {
   return (
     <StyledOffer>
@@ -50,10 +48,8 @@ export function Offer({
 }
 
 Offer.propTypes = {
-  offer: PropTypes.shape({
-    hotel: PropTypes.shape(Hotel),
-    quote: PropTypes.shape(Quote),
-    cancellation: PropTypes.string,
-    previewImage: PropTypes.shape(PreviewImage),
-  }).isRequired,
+  hotel: PropTypes.shape(Hotel).isRequired,
+  quote: PropTypes.shape(Quote).isRequired,
+  cancellation: PropTypes.string.isRequired,
+  previewImage: PropTypes.shape(PreviewImage).isRequired,
 };
