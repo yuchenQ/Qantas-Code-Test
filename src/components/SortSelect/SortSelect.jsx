@@ -18,7 +18,7 @@ const StyledSortSelect = styled.div`
   }
 `;
 
-export function SortSelect({ options, onSelect }) {
+export function SortSelect({ options, onSelect, sortType }) {
   return (
     <StyledSortSelect>
       <strong>Sort by</strong>
@@ -26,7 +26,7 @@ export function SortSelect({ options, onSelect }) {
         prefix="Price"
         options={options}
         onSelect={onSelect}
-        defaultOption={options[0]}
+        value={sortType}
       />
     </StyledSortSelect>
   );
@@ -36,4 +36,5 @@ SortSelect.propTypes = {
   options: PropTypes.arrayOf(PropTypes.oneOf(Object.values(SORT_TYPE)))
     .isRequired,
   onSelect: PropTypes.func.isRequired,
+  sortType: PropTypes.oneOf(Object.values(SORT_TYPE)).isRequired,
 };

@@ -1,7 +1,11 @@
 {
-  "name": "js-react-starter",
+  "name": "qantas-code-test",
   "version": "1.0.0",
   "description": "A React boilerplate with babel, eslint, prettier and etc.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuchenQ/Qantas-Code-Test.git"
+  },
   "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack/webpack.config.prod.js",
@@ -54,7 +58,6 @@
     "@babel/preset-react": "^7.8.3",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@storybook/addon-actions": "^5.3.10",
     "@storybook/addon-backgrounds": "^5.3.10",
     "@storybook/addon-knobs": "^5.3.10",
     "@storybook/addon-notes": "^5.3.10",
@@ -96,6 +99,7 @@
     "pretty-quick": "^2.0.1",
     "react-test-renderer": "^16.12.0",
     "regenerator-runtime": "^0.13.3",
+    "sinon": "^8.1.1",
     "stylelint": "^13.0.0",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",

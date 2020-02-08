@@ -31,7 +31,11 @@ export function App() {
       header={
         <HeaderLayout>
           <SearchResult count={offers.length} location={location} />
-          <SortSelect options={Object.values(SORT_TYPE)} onSelect={onSelect} />
+          <SortSelect
+            options={Object.values(SORT_TYPE)}
+            onSelect={onSelect}
+            sortType={sortType}
+          />
         </HeaderLayout>
       }>
       <Offers offers={sortOffers(offers, sortType)} />
