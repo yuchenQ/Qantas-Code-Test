@@ -70,14 +70,16 @@ export function Detail({
     <StyledDetail>
       <Heading>
         <NameLayout>
-          <HotelName>{name}</HotelName>
+          <HotelName data-testid="hotel-name">{name}</HotelName>
           <Rate color={COLOR_BUTTER_YELLOW} type={type} value={value} />
         </NameLayout>
-        <Address>{address.join(' ')}</Address>
+        <Address data-testid="address">{address.join(', ')}</Address>
       </Heading>
-      <RoomType>{room}</RoomType>
+      <RoomType data-testid="room-type">{room}</RoomType>
       {isCancellable(cancellation) && (
-        <FreeCancellation>Free cancellation</FreeCancellation>
+        <FreeCancellation data-testid="free-cancellation">
+          Free cancellation
+        </FreeCancellation>
       )}
     </StyledDetail>
   );
