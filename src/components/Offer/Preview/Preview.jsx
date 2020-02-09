@@ -34,8 +34,12 @@ const Tag = styled.div`
 export function Preview({ imageUrl, caption, tag }) {
   return (
     <StyledPreview>
-      <PreviewImage imageUrl={imageUrl} caption={caption} />
-      <Tag>{tag}</Tag>
+      <PreviewImage
+        imageUrl={imageUrl}
+        caption={caption}
+        data-testid="preview-image"
+      />
+      <Tag data-testid="tag">{tag}</Tag>
     </StyledPreview>
   );
 }
