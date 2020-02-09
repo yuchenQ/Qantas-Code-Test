@@ -2,13 +2,9 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  FaCircle as Circle,
-  FaAdjust as HalfCircle,
-  FaStar as Star,
-  FaStarHalf as HalfStar,
-} from 'react-icons/fa';
+
 import styled from 'styled-components';
+import { Circle, CircleHalf, Star, StarHalf } from '../Icons';
 
 const TYPE = {
   STAR: 'STAR',
@@ -23,11 +19,11 @@ export function Rate({ type, value, color }) {
   const Icon = {
     [TYPE.CIRCLE]: {
       full: Circle,
-      half: HalfCircle,
+      half: CircleHalf,
     },
     [TYPE.STAR]: {
       full: Star,
-      half: HalfStar,
+      half: StarHalf,
     },
   }[type];
 
@@ -45,7 +41,11 @@ export function Rate({ type, value, color }) {
     }
   }
 
-  return <StyledRate color={color}>{characters}</StyledRate>;
+  return (
+    <StyledRate data-testid="rate-wrapper" color={color}>
+      {characters}
+    </StyledRate>
+  );
 }
 
 Rate.defaultProps = {
