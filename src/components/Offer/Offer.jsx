@@ -39,7 +39,7 @@ export function Offer({
   previewImage: { url: imageUrl, caption, tag },
 }) {
   return (
-    <StyledOffer>
+    <StyledOffer data-testid="offer">
       <Preview imageUrl={imageUrl} caption={caption} tag={tag} />
       <Detail hotel={hotel} cancellation={cancellation} />
       <StyledQuote quote={quote} />
