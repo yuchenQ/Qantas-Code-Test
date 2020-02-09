@@ -7,7 +7,11 @@ import { COLOR_DUSTY_GRAY } from '../../styles/variables';
 import { Preview } from './Preview';
 import { Detail } from './Detail';
 import { Quote } from './Quote';
-import { Hotel, PreviewImage } from '../../propTypes/Offer';
+import {
+  Hotel as HotelPropType,
+  PreviewImage as PreviewImagePropType,
+  Quote as QuotePropType,
+} from '../../propTypes/Offer';
 
 const StyledOffer = styled.div`
   --gap: 1rem;
@@ -48,8 +52,8 @@ export function Offer({
 }
 
 Offer.propTypes = {
-  hotel: PropTypes.shape(Hotel).isRequired,
-  quote: PropTypes.shape(Quote).isRequired,
+  hotel: PropTypes.shape(HotelPropType).isRequired,
+  quote: PropTypes.shape(QuotePropType).isRequired,
   cancellation: PropTypes.string.isRequired,
-  previewImage: PropTypes.shape(PreviewImage).isRequired,
+  previewImage: PropTypes.shape(PreviewImagePropType).isRequired,
 };

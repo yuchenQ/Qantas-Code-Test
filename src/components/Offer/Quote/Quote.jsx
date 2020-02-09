@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import mapCurrencyToSymbol from '../../../helpers/mapCurrencyToSymbol';
 import { COLOR_VENETIAN_RED } from '../../../styles/variables';
+import { Quote as QuotePropType } from '../../../propTypes/Offer';
 
 const StyledQuote = styled.div`
   display: grid;
@@ -33,15 +34,15 @@ const Promotion = styled.div`
 export function Quote({ className, quote: { price, currency, promotion } }) {
   return (
     <StyledQuote className={className}>
-      <Label>{`1 night total (${currency})`}</Label>
+      <Label data-testid="label">{`1 night total (${currency})`}</Label>
       <Price>
-        <Symbol>{mapCurrencyToSymbol(currency)}</Symbol>
-        <span>{price}</span>
+        <Symbol data-testid="symbol">{mapCurrencyToSymbol(currency)}</Symbol>
+        <span data-testid="price">{price}</span>
       </Price>
       {promotion && (
-        <Promotion>
+        <Promotion data-testid="promotion">
           {' '}
-          Save &nbsp;
+          Save&nbsp;
           {mapCurrencyToSymbol(currency)}
           {promotion.saving.amount}~
         </Promotion>
@@ -56,5 +57,5 @@ Quote.defaultProps = {
 
 Quote.propTypes = {
   className: PropTypes.string,
-  quote: PropTypes.shape(Quote).isRequired,
+  quote: PropTypes.shape(QuotePropType).isRequired,
 };
